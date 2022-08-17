@@ -38,4 +38,10 @@
 		</plugins>
 	</build>
 
+	<scm>
+		<developerConnection>
+			scm:git:git@github.com:appindus-zsmith/com.example.democlient.git
+		</developerConnection>
+	</scm>
+
 </project>
