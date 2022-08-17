@@ -37,6 +37,7 @@
 		</plugins>
 	</build>
 
+
 	<scm>
 		<developerConnection>
 			scm:git:git@github.com:appindus-zsmith/com.example.democlient.git
