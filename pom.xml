@@ -44,4 +44,17 @@
 	  <tag>demo-client-true</tag>
   </scm>
 
+	<distributionManagement>
+		<snapshotRepository>
+			<id>develop</id>
+			<name>develop</name>
+			<url>https://github.com/appindus-zsmith/com.example.democlient</url>
+		</snapshotRepository>
+		<repository>
+			<id>develop</id>
+			<name>develop</name>
+			<url>https://github.com/appindus-zsmith/com.example.democlient</url>
+		</repository>
+	</distributionManagement>
+
 </project>
