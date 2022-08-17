@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>demo-client</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>demo-client</name>
 	<description>demo-client</description>
 	<properties>
@@ -41,7 +41,7 @@
 		<developerConnection>
 			scm:git:git@github.com:appindus-zsmith/com.example.democlient.git
 		</developerConnection>
-	  <tag>demo-client-true</tag>
+	  <tag>demo-client-1.0.0</tag>
   </scm>
 
 </project>
