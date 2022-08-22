@@ -17,5 +17,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: v${{ steps.project.outputs.version }}
-          name: ${{ NOW::$(date +'%Y-%m-%d') }}
+          name: ${{ steps.date.outputs.date }}
           body: ${{ steps.tag_version.outputs.changelog }}
