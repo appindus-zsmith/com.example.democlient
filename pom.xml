@@ -46,9 +46,9 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>versions-maven-plugin</artifactId>
-				<version>2.7</version>
 				<configuration>
-					<includesList>com.example.*</includesList>
+					<includesList>com.example*</includesList>
+					<allowMinorUpdates>true</allowMinorUpdates>
 				</configuration>
 			</plugin>
 
@@ -57,11 +57,11 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<configuration>
 					<tagNameFormat>dev@{project.version}</tagNameFormat>
-					<preparationGoals>
-						versions:use-releases versions:use-latest-releases clean verify
-					</preparationGoals>
+					<!--<preparationGoals>
+						versions:use-releases clean verify
+					</preparationGoals>-->
 					<completionGoals>
-						versions:use-snapshots versions:use-latest-snapshots clean verify
+						versions:use-latest-snapshots clean verify
 					</completionGoals>
 				</configuration>
 			</plugin>
