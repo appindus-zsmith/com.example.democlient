@@ -58,10 +58,10 @@
 				<configuration>
 					<tagNameFormat>dev@{project.version}</tagNameFormat>
 					<preparationGoals>
-						versions:use-latest-releases clean verify
+						versions:use-releases versions:use-latest-releases clean verify
 					</preparationGoals>
 					<completionGoals>
-						versions:use-latest-snapshots clean verify
+						versions:use-snapshots versions:use-latest-snapshots clean verify
 					</completionGoals>
 				</configuration>
 			</plugin>
