@@ -40,6 +40,12 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<configuration>
 					<tagNameFormat>dev@{project.version}</tagNameFormat>
+					<preparationGoals>
+						versions:use-latest-releases clean verify
+					</preparationGoals>
+					<completionGoals>
+						versions:use-latest-snapshots clean verify
+					</completionGoals>
 				</configuration>
 			</plugin>
 		</plugins>
