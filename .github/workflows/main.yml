@@ -1,4 +1,4 @@
-name: Bump version
+name: Release and Tag
 on:
   push:
     branches:
@@ -13,9 +13,12 @@ jobs:
         uses: mathieudutour/github-tag-action@v6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Extract Maven project version
+        run: echo ::set-output name=version::$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
+        id: project
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:
-          tag: ${{ steps.project.outputs.version }}
+          tag: v${{ steps.project.outputs.version }}
           name: ${{ steps.date.outputs.date }}
           body: ${{ steps.tag_version.outputs.changelog }}
