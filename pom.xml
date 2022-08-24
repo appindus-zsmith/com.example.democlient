@@ -51,7 +51,7 @@
 						clean verify package install
 					</preparationGoals>
 					<completionGoals>
-						versions:use-latest-snapshots clean verify package install
+						versions:use-latest-snapshots clean verify package install release:clean
 					</completionGoals>
 					<tagNameFormat>r@{project.version}</tagNameFormat>
 				</configuration>
