@@ -48,10 +48,10 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<configuration>
 					<preparationGoals>
-						clean package install verify
+						clean verify package install
 					</preparationGoals>
 					<completionGoals>
-						versions:use-latest-snapshots clean package install verify
+						versions:use-latest-snapshots clean verify package install
 					</completionGoals>
 					<tagNameFormat>r@{project.version}</tagNameFormat>
 				</configuration>
