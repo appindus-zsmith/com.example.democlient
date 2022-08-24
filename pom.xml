@@ -53,6 +53,7 @@
 					<completionGoals>
 						versions:use-latest-snapshots clean package install verify
 					</completionGoals>
+					<tagNameFormat>r@{project.version}</tagNameFormat>
 				</configuration>
 			</plugin>
 		</plugins>
