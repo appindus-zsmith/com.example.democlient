@@ -54,7 +54,7 @@
 						versions:use-latest-snapshots clean package install verify
 					</completionGoals>
 					<branchName>release</branchName>
-					<updateBranchVersions>true</updateBranchVersions>
+					<updateBranchVersions>false</updateBranchVersions>
 				</configuration>
 			</plugin>
 		</plugins>
