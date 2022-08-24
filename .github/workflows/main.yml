@@ -7,19 +7,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - name: Extract Maven project version
       run: echo ::set-output name=version::$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
       id: project
         
-    - name: Tag snapshot
-      uses: tvdias/github-tagger@v0.0.1
+    - name: Bump version and push tag
+      id: tag_version
+      uses: mathieudutour/github-tag-action@v6.0
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         tag: v${{ steps.project.outputs.version }}
 
     - name: Create a GitHub release
       uses: ncipollo/release-action@v1
       with:
-        tag: v${{ steps.project.outputs.version }}
+        tag: ${{ steps.tag_version.outputs.new_tag }}
         name: ${{ steps.date.outputs.date }}
         body: ${{ steps.tag_version.outputs.changelog }}
