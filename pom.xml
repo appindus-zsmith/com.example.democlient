@@ -72,7 +72,7 @@
 		<developerConnection>
 			scm:git:git@github.com:appindus-zsmith/com.example.democlient.git
 		</developerConnection>
-    <tag>r1.13.0</tag>
+    <tag>release2</tag>
   </scm>
 
 </project>
