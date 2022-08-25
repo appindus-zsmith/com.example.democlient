@@ -2,7 +2,7 @@ name: Develop Tag Actions
 
 on:
   push:
-    branches
+    branches:
      - develop
     tags:
       - 'r*'
