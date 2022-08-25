@@ -2,8 +2,8 @@ name: Develop Tag Actions
 
 on:
   push:
-    branches:
-     - develop
+    branches-ignore:
+     - master
     tags:
       - 'r*'
 jobs:
