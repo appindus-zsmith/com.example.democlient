@@ -1,7 +1,7 @@
 name: Develop Tag Actions
 
 on:
-  push:
+  create:
     branches-ignore:
      - master
     tags:
