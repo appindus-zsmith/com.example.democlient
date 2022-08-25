@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>demo-client</artifactId>
-	<version>1.22.1-SNAPSHOT</version>
+	<version>1.22.1</version>
 	<name>demo-client</name>
 	<description>demo-client</description>
 	<properties>
