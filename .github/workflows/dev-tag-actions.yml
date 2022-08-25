@@ -5,7 +5,7 @@ on:
     branches-ignore:
      - master
     tags:
-      - 'r*'
+      - r*
 jobs:
   create-release-pr:
     uses: apple-industries/github-workflows/.github/workflows/create-release-pr.yml@v1.0.2
